@@ -1,0 +1,42 @@
+<h2>View Accounts</h2>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Gender</th>
+        <th>SSN</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let acc of accounts">
+            <td>{{acc.userAccId}}</td>
+            <td>{{acc.fullName}}</td>
+            <td>{{acc.email}}</td>
+            <td>{{acc.mobileNo}}</td>
+            <td>{{acc.gender}}</td>
+            <td>{{acc.ssn}}</td>
+            <td>             
+              <button class="btn btn-info" (click)="editAccount(acc.userAccId)">Edit</button>&nbsp;       
+                      
+             
+              /*<ng-container *ngIf="acc.activeSw === 'N';  then activate; else deactivate">
+              </ng-container>
+          
+              <ng-template #activate>
+                <button class="btn btn-success" (click)="updateAccount(acc.userAccId, 'Y')">Activate</button>&nbsp;
+              </ng-template>
+          
+              <ng-template #deactivate>
+                <button class="btn btn-danger" (click)="updateAccount(acc.userAccId, 'N')">De-Activate</button>
+              </ng-template>*/
+
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+  

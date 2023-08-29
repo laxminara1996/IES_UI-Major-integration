@@ -1,0 +1,74 @@
+<div class="col-md-6 offset-md-3">
+    <h2>Update User Account</h2>
+
+
+    <h4>{{msg}}</h4>
+
+    <form (ngSubmit)="updateAccount()">
+    
+        <div class="form-group">
+            <label >Full Name</label>
+            <input type="text" 
+            class="form-control" 
+            name="name" 
+            id="name"
+            [(ngModel)]="account.fullName"
+            >
+        </div>
+        <div class="form-group">
+            <label >Email</label>
+            <input type="text" 
+            class="form-control" 
+            name="email" 
+            id="email"
+            [(ngModel)]="account.email"
+            >
+        </div>
+        <div class="form-group">
+            <label >Phno</label>
+            <input type="text" 
+            class="form-control" 
+            name="mobileNo" 
+            id="mobileNo"
+            [(ngModel)]="account.mobileNo">
+        </div>
+        <div class="form-group">
+            <label >Gender</label>
+            <input type="text" 
+            class="form-control" 
+            name="gender" 
+            id="gender"
+            [(ngModel)]="account.gender">
+        </div>
+        <div class="form-group">
+            <label >DOB</label>
+            <input type="text" 
+            class="form-control" 
+            name="dob" 
+            id="dob"
+            [(ngModel)]="account.dob">
+        </div>
+
+        <div class="form-group">
+            <label >SSN</label>
+            <input type="text" 
+            class="form-control" 
+            name="ssn" 
+            id="ssn"
+            [(ngModel)]="account.ssn">
+        </div>
+        <div class="form-group">
+            <label >Role</label>
+            <select name="demo" id="#" [(ngModel)]="account.roleId" class="form-control" >
+                <option value="1">Admin</option>
+                <option value="2">Case Worker</option>
+        </select>
+        </div>
+        <br>
+        <div>
+            <button class="btn btn-primary" type="submit">
+                Update
+            </button>
+        </div>
+    </form>
+    </div>
